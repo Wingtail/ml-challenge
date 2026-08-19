@@ -1,0 +1,31 @@
+experiment,condition,mean_macro_f1,sample_std,seeds,question,source
+matched_backend,pretrained_llm,93.6531,1.6312,42-45,Do language-pretrained weights help?,outputs/submission_compliant/context/masked
+matched_backend,random_llm,95.3974,0.3793,42-45,Is a large fixed transformation sufficient?,outputs/llm_ablation_exact/random_llm/masked
+matched_backend,identity_projector_and_head,95.4157,1.4392,42-45,Does the frozen LLM transformation add value?,outputs/llm_ablation_exact/identity/masked
+frozen_encoder,pretrained_llm,91.0589,1.2495,42-45,Does removing encoder optimization reveal LLM benefit?,outputs/submission_compliant/frozen_encoder_context/masked
+frozen_encoder,random_llm,91.8637,0.5389,42-45,Does removing encoder optimization reveal LLM benefit?,outputs/llm_ablation_exact/low_label/1.0/random_llm/masked
+frozen_encoder,identity_projector_and_head,92.3612,0.5430,42-45,Does removing encoder optimization reveal LLM benefit?,outputs/llm_ablation_exact/low_label/1.0/identity/masked
+layer_probe,projected_token_before_llm,95.0763,0.9726,42-45,Where is activity information linearly accessible?,outputs/llm_ablation_exact/layer_probes
+layer_probe,best_llm_layer_10,94.2613,0.7740,42-45,Does any frozen LLM layer improve separability?,outputs/llm_ablation_exact/layer_probes
+layer_probe,final_llm_layer,93.7965,1.1637,42-45,Does the final LLM state preserve separability?,outputs/llm_ablation_exact/layer_probes
+projector,mlp_projector_pretrained_llm,94.4830,0.5563,42-45,Does more interface capacity help?,outputs/llm_ablation_exact/nonlinear_llm/masked
+prompt_format,chat_pretrained_llm,94.2073,0.7137,42-45,Does the native SmolLM2 chat template help?,outputs/chat_prompt/masked
+prompt_format,chat_random_llm,95.2540,0.3696,42-45,Does chat formatting expose pretrained value?,outputs/chat_prompt_random/masked
+low_label_1_percent,pretrained_llm,48.7434,32.8594,42-45,Does language pretraining improve label efficiency?,outputs/llm_ablation_exact/low_label/0.01/llm/masked
+low_label_1_percent,random_llm,85.5494,2.2831,42-45,Does language pretraining improve label efficiency?,outputs/llm_ablation_exact/low_label/0.01/random_llm/masked
+low_label_1_percent,identity_projector_and_head,84.9497,2.6012,42-45,Does language pretraining improve label efficiency?,outputs/llm_ablation_exact/low_label/0.01/identity/masked
+low_label_5_percent,pretrained_llm,81.2934,9.9715,42-45,Does language pretraining improve label efficiency?,outputs/llm_ablation_exact/low_label/0.05/llm/masked
+low_label_5_percent,random_llm,87.5706,2.1843,42-45,Does language pretraining improve label efficiency?,outputs/llm_ablation_exact/low_label/0.05/random_llm/masked
+low_label_5_percent,identity_projector_and_head,88.8093,0.5450,42-45,Does language pretraining improve label efficiency?,outputs/llm_ablation_exact/low_label/0.05/identity/masked
+low_label_10_percent,pretrained_llm,88.7059,1.4594,42-45,Does language pretraining improve label efficiency?,outputs/llm_ablation_exact/low_label/0.10/llm/masked
+low_label_10_percent,random_llm,90.5402,0.3908,42-45,Does language pretraining improve label efficiency?,outputs/llm_ablation_exact/low_label/0.10/random_llm/masked
+low_label_10_percent,identity_projector_and_head,90.0801,0.8793,42-45,Does language pretraining improve label efficiency?,outputs/llm_ablation_exact/low_label/0.10/identity/masked
+low_label_25_percent,pretrained_llm,90.5319,1.6153,42-45,Does language pretraining improve label efficiency?,outputs/llm_ablation_exact/low_label/0.25/llm/masked
+low_label_25_percent,random_llm,91.0898,0.4619,42-45,Does language pretraining improve label efficiency?,outputs/llm_ablation_exact/low_label/0.25/random_llm/masked
+low_label_25_percent,identity_projector_and_head,90.5392,1.4118,42-45,Does language pretraining improve label efficiency?,outputs/llm_ablation_exact/low_label/0.25/identity/masked
+low_label_50_percent,pretrained_llm,89.9048,1.4649,42-45,Does language pretraining improve label efficiency?,outputs/llm_ablation_exact/low_label/0.50/llm/masked
+low_label_50_percent,random_llm,91.8663,0.3685,42-45,Does language pretraining improve label efficiency?,outputs/llm_ablation_exact/low_label/0.50/random_llm/masked
+low_label_50_percent,identity_projector_and_head,90.8953,0.8159,42-45,Does language pretraining improve label efficiency?,outputs/llm_ablation_exact/low_label/0.50/identity/masked
+low_label_100_percent,pretrained_llm,91.0589,1.2495,42-45,Does language pretraining improve label efficiency?,outputs/llm_ablation_exact/low_label/1.0/llm/masked
+low_label_100_percent,random_llm,91.8637,0.5389,42-45,Does language pretraining improve label efficiency?,outputs/llm_ablation_exact/low_label/1.0/random_llm/masked
+low_label_100_percent,identity_projector_and_head,92.3612,0.5430,42-45,Does language pretraining improve label efficiency?,outputs/llm_ablation_exact/low_label/1.0/identity/masked

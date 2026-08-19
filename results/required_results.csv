@@ -1,0 +1,4 @@
+condition,seed_42_macro_f1,mean_macro_f1,sample_std,seeds,source
+direct_classifier,96.0493,95.9284,0.2529,42-45,outputs/reproduction/direct/seed_{seed}/result.json
+pretrained_llm_context,95.1190,93.6531,1.6312,42-45,outputs/reproduction/context/seed_{seed}/result.json
+shuffled_context_embeddings,16.4017,16.4768,0.0554,42-45,outputs/reproduction/context/seed_{seed}/shuffle.json
